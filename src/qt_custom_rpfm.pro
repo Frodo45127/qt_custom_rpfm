@@ -9,6 +9,10 @@ QT       += widgets
 TARGET = qt_custom_rpfm
 TEMPLATE = lib
 
+# We only want the release version, as this lib is not going to get "advanced" stuff.
+# In case you want to build the debug version, change the following line, removing the "release".
+CONFIG += staticlib release
+
 DEFINES += QT_CUSTOM_RPFM_LIBRARY
 
 # The following define makes your compiler emit warnings if you use
@@ -28,6 +32,18 @@ SOURCES += \
 HEADERS += \
         qt_custom_rpfm_global.h \ 
         combobox_item_delegate.h
+
+release:DESTDIR = release
+release:OBJECTS_DIR = release/.obj
+release:MOC_DIR = release/.moc
+release:RCC_DIR = release/.rcc
+release:UI_DIR = release/.ui
+
+debug:DESTDIR = debug
+debug:OBJECTS_DIR = debug/.obj
+debug:MOC_DIR = debug/.moc
+debug:RCC_DIR = debug/.rcc
+debug:UI_DIR = debug/.ui
 
 unix {
     target.path = /usr/lib
