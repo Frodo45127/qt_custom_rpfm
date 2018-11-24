@@ -46,3 +46,8 @@
 
 # QMake files.
 .qmake.stash
+
+# Build files.
+Makefile*
+/src/debug/
+/src/release/
