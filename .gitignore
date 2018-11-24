@@ -30,3 +30,19 @@
 *.exe
 *.out
 *.app
+
+# Sublime Text files.
+*.sublime-project
+*.sublime-workspace
+
+# KDE Directory file.
+.directory
+
+# Build directory.
+/builds/
+
+# Qt Creator config file.
+*.pro.user
+
+# QMake files.
+.qmake.stash
