@@ -27,11 +27,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        combobox_item_delegate.cpp
+        combobox_item_delegate.cpp \
+    spinbox_item_delegate.cpp \
+    doublespinbox_item_delegate.cpp
 
 HEADERS += \
         qt_custom_rpfm_global.h \ 
-        combobox_item_delegate.h
+        combobox_item_delegate.h \
+    spinbox_item_delegate.h \
+    doublespinbox_item_delegate.h
 
 release:DESTDIR = release
 release:OBJECTS_DIR = release/.obj
