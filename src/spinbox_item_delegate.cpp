@@ -23,7 +23,7 @@ QWidget* QSpinBoxItemDelegate::createEditor(QWidget *parent, const QStyleOptionV
     }
     else {
         QSpinBox* spinBox = new QSpinBox(parent);
-        spinBox->setRange(INT_MIN, INT_MAX);
+        spinBox->setRange(-2147483648, 2147483647);
         return spinBox;
     }
 }
