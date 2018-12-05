@@ -25,7 +25,15 @@ void QComboBoxItemDelegate::setEditorData(QWidget *editor, const QModelIndex &in
     // update model widget
     QString value = index.model()->data(index, Qt::EditRole).toString();
     QComboBox* comboBox = static_cast<QComboBox*>(editor);
-    comboBox->setCurrentIndex(comboBox->findText(value));
+
+    // If no item has been found with that text, we add it and select it.
+    // This fixes the "the text vanished when I double clicked the cell" bug.
+    int pos = comboBox->findText(value);
+    if (pos != -1) { comboBox->setCurrentIndex(pos); }
+    else {
+        comboBox->insertItem(0, value);
+        comboBox->setCurrentIndex(0);
+    }
 }
 
 void QComboBoxItemDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const {
