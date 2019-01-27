@@ -29,13 +29,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         combobox_item_delegate.cpp \
     spinbox_item_delegate.cpp \
-    doublespinbox_item_delegate.cpp
+    doublespinbox_item_delegate.cpp \
+    treeview_filter.cpp
 
 HEADERS += \
         qt_custom_rpfm_global.h \ 
         combobox_item_delegate.h \
     spinbox_item_delegate.h \
-    doublespinbox_item_delegate.h
+    doublespinbox_item_delegate.h \
+    treeview_filter.h
 
 release:DESTDIR = release
 release:OBJECTS_DIR = release/.obj
