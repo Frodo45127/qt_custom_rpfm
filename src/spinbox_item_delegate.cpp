@@ -79,6 +79,7 @@ void QSpinBoxItemDelegate::setModelData(QWidget *editor, QAbstractItemModel *mod
             bool ok;
             signed int value = lineEdit->text().toInt(&ok);
             if (ok) { model->setData(index, value, Qt::EditRole); }
+            else { model->setData(index, "", Qt::EditRole); }
         }
         else {
             QSpinBox* spinBox = static_cast<QSpinBox*>(editor);

@@ -1,4 +1,5 @@
 #ifndef QT_CUSTOM_RPFM_GLOBAL_H
+
 #define QT_CUSTOM_RPFM_GLOBAL_H
 
 #include <QtCore/qglobal.h>

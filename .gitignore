@@ -51,3 +51,4 @@
 Makefile*
 /src/debug/
 /src/release/
+/build*/
